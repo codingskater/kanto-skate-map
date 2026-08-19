@@ -33,3 +33,4 @@ Then open the local URL Vite prints (usually http://localhost:5173).
 - Clicking a sidebar item currently just highlights it — hook it up to pan/zoom the map to that marker (`useMap()` from react-leaflet, or a ref) as a next feature.
 - Consider filter/search UI (indoor vs outdoor, free vs paid, etc.) once the dataset grows.
 # kanto-skate-map
+# kanto-skate-map
