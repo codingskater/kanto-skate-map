@@ -34,3 +34,4 @@ Then open the local URL Vite prints (usually http://localhost:5173).
 - Consider filter/search UI (indoor vs outdoor, free vs paid, etc.) once the dataset grows.
 # kanto-skate-map
 # kanto-skate-map
+# kanto-skate-map
