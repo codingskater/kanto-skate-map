@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Skatepark 1",
+    "lat": 35.7100,
+    "lng": 139.8107,
+    "address": "",
+    "surfaceType": "",
+    "features": [],
+    "rampSizes": "",
+    "indoorOutdoor": "",
+    "airConditioning": null,
+    "pricing": "",
+    "lessonsAvailable": null,
+    "website": ""
+  },
+  {
+    "id": 2,
+    "name": "Skatepark 2",
+    "lat": 35.6938,
+    "lng": 139.7036,
+    "address": "",
+    "surfaceType": "",
+    "features": [],
+    "rampSizes": "",
+    "indoorOutdoor": "",
+    "airConditioning": null,
+    "pricing": "",
+    "lessonsAvailable": null,
+    "website": ""
+  },
+  {
+    "id": 3,
+    "name": "Skatepark 3",
+    "lat": 35.4437,
+    "lng": 139.6380,
+    "address": "",
+    "surfaceType": "",
+    "features": [],
+    "rampSizes": "",
+    "indoorOutdoor": "",
+    "airConditioning": null,
+    "pricing": "",
+    "lessonsAvailable": null,
+    "website": ""
+  }
+]

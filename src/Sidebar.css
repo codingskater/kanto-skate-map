@@ -1,0 +1,119 @@
+.sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  height: 100%;
+  background: var(--color-white);
+  padding: 24px 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--color-text-dark);
+}
+
+.sidebar__title {
+  margin: 0 0 20px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-purple-primary);
+  border-radius: 999px;
+  padding: 10px 16px;
+  color: var(--color-text-dark);
+}
+
+.search-bar__icon-btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+}
+
+.search-bar__input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: var(--color-text-dark);
+}
+
+.search-bar__input::placeholder {
+  color: var(--color-text-dark);
+  opacity: 0.75;
+}
+
+/* Skatepark list */
+.park-list {
+  margin-top: 24px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.park-list__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-purple-primary);
+  color: var(--color-text-dark);
+  border: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.park-list__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.park-list__item {
+  width: 100%;
+  text-align: left;
+  background: var(--color-beige);
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--color-text-dark);
+  cursor: pointer;
+}
+
+.park-list__item:hover {
+  filter: brightness(0.97);
+}
+
+.park-list__item--selected {
+  background: var(--color-purple-selected);
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+/* Detail panel — layout only, intentionally unstyled */
+.detail-panel {
+  margin-top: 24px;
+}
+
+.detail-panel__header {
+  background: var(--color-purple-primary);
+  padding: 10px 14px;
+  font-weight: 600;
+}
+
+.detail-panel__body {
+  background: var(--color-beige);
+  padding: 14px;
+  min-height: 160px;
+}

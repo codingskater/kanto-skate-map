@@ -1,0 +1,25 @@
+/* ==========================================================================
+   OllieUp! — Kanto Skateboard Map
+   CSS Custom Color Codes (CSCC)
+   Extracted from Figma prototype export
+   ========================================================================== */
+
+:root {
+  /* Brand / Primary Purple */
+  --color-purple-primary: #9b4dff;   /* search bar, "Skateparks" header, detail panel header */
+  --color-purple-selected: #6b2fa0;  /* selected list item (Skatepark 1) */
+
+  /* Neutrals */
+  --color-white: #ffffff;            /* sidebar background */
+  --color-beige: #f2f0e9;            /* unselected list rows, detail panel body */
+  --color-text-dark: #1d1b20;        /* primary text / icons */
+
+  /* Map */
+  --color-map-bg: #eae9e4;           /* base map gray */
+  --color-map-green: #acc59e;        /* parks / green space */
+  --color-map-river: #a6c8e6;        /* river / water */
+
+  /* Markers */
+  --color-pin-teal: #00a896;         /* skatepark pin fill */
+  --color-pin-teal-dark: #00676b;    /* pin shadow / stroke */
+}

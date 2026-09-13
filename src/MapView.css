@@ -1,0 +1,14 @@
+.map-view {
+  flex: 1;
+  height: 100%;
+}
+
+.map-view__container {
+  width: 100%;
+  height: 100%;
+  background: var(--color-map-bg);
+}
+
+.park-pin {
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
+}
