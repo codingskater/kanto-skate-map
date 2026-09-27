@@ -78,9 +78,22 @@ export default function Sidebar({ parks, selectedParkId, onSelectPark }) {
       {/* Detail panel — intentionally unstyled for now */}
       {selectedPark && (
         <section className="detail-panel">
-          <div className="detail-panel__header">{selectedPark.name}</div>
+          <div className="detail-panel__header">{selectedPark.name}/{selectedPark.nameJa}</div>
           <div className="detail-panel__body">
-            <p>Insert information here</p>
+            <ul>
+              <li>{selectedPark.address}</li>
+              <li>{selectedPark.surfaceType}</li>
+              <li>{selectedPark.features}</li>
+              <li>{selectedPark.rampSizes}</li>
+              <li>{selectedPark.indoorOutdoor}</li>
+              <li>{selectedPark.airConditioning}</li>
+              <li>{selectedPark.pricing.type}</li>
+              <li>{selectedPark.pricing.notes}</li>
+              <li>{selectedPark.lessonsAvailable}</li>
+              <li>{selectedPark.website}</li>
+              <li>{selectedPark.sourceNotes}</li>
+              <li>{selectedPark.verified}</li>
+            </ul>
           </div>
         </section>
       )}
