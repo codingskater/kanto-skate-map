@@ -41,12 +41,16 @@ const selectedPinIcon = new L.DivIcon({
   popupAnchor: [0, -46],
 });
 
+const SELECTED_ZOOM = 17;
+
 // Recenters the map when the selected park changes
 function FlyToSelected({ park }) {
   const map = useMap();
   useEffect(() => {
     if (park) {
-      map.flyTo([park.lat, park.lng], map.getZoom(), { duration: 0.6 });
+      map.flyTo([park.lat, park.lng], 
+      Math.max(map.getZoom(), SELECTED_ZOOM),
+      { duration: 0.8 });
     }
   }, [park, map]);
   return null;
