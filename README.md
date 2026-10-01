@@ -29,9 +29,10 @@ Then open the local URL Vite prints (usually http://localhost:5173).
 ## Next steps
 
 - Verify/fill in the `null` fields (ramp sizes, some pricing/hours) against official sources.
-- Add more parks (Kanagawa, Saitama, Chiba, Ibaraki, Tochigi, Gunma still need entries — this starter only covers a few Tokyo spots).
-- Clicking a sidebar item currently just highlights it — hook it up to pan/zoom the map to that marker (`useMap()` from react-leaflet, or a ref) as a next feature.
-- Consider filter/search UI (indoor vs outdoor, free vs paid, etc.) once the dataset grows.
-# kanto-skate-map
-# kanto-skate-map
-# kanto-skate-map
+- Add more parks (Kanagawa, Saitama, Chiba, Ibaraki, Tochigi, Gunma)
+- Add filter/search UI (indoor vs outdoor, free vs paid, nearest park to station, etc.)
+- View pages for each park
+- Consider an AI Agent to make recommendations
+
+# Other notes
+- This application is part of a larger idea to consolidate all skatepark information in Japan and also build up the community of skateboarders.
