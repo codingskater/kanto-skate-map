@@ -1,5 +1,7 @@
 import { MapContainer, TileLayer, Marker, useMap } from "react-leaflet";
+import { GeoJSON } from "react-leaflet";
 import L from "leaflet";
+import stations from "./data/stations.json";
 import { useEffect } from "react";
 import "leaflet/dist/leaflet.css";
 import "./MapView.css";
@@ -48,7 +50,7 @@ function FlyToSelected({ park }) {
   const map = useMap();
   useEffect(() => {
     if (park) {
-      map.flyTo([park.lat, park.lng], 
+      map.flyTo([park.lat, park.lng],
       Math.max(map.getZoom(), SELECTED_ZOOM),
       { duration: 0.8 });
     }
@@ -77,6 +79,22 @@ export default function MapView({ parks, selectedParkId, onSelectPark }) {
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
+        <GeoJSON
+          data={stations}
+          pointToLayer={(_feature, latlng) =>
+            L.circleMarker(latlng, {
+              radius: 4,
+              color: "#ffffff",
+              weight: 1.5,
+              fillColor: "#e4572e",
+              fillOpacity: 0.95,
+            })
+          }
+          onEachFeature={(feature, layer) => {
+            const name = feature.properties["name:en"] || feature.properties.name;
+            if (name) layer.bindTooltip(name);
+          }}
         />
         {parks.map((park) => (
           <Marker
