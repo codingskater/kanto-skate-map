@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Sidebar.css";
+import getNearestStation from "./components/nearestStation";
 
 /**
  * Sidebar
@@ -20,6 +21,8 @@ export default function Sidebar({ parks, selectedParkId, onSelectPark }) {
   );
 
   const selectedPark = parks.find((park) => park.id === selectedParkId);
+
+  const nearest = getNearestStation(selectedPark);
 
   return (
     <aside className="sidebar">
@@ -76,11 +79,13 @@ export default function Sidebar({ parks, selectedParkId, onSelectPark }) {
       </section>
 
       {/* Detail panel — intentionally unstyled for now */}
-      {selectedPark && (
+      {selectedPark && nearest && (
         <section className="detail-panel">
           <div className="detail-panel__header">{selectedPark.name}/{selectedPark.nameJa}</div>
           <div className="detail-panel__body">
             <ul>
+              <li>Nearest station: {nearest.name}</li>
+              <li>Distance: {nearest.distanceKm.toFixed(2)} km</li>
               <li>{selectedPark.address}</li>
               <li>{selectedPark.surfaceType}</li>
               <li>{selectedPark.features}</li>
@@ -97,6 +102,7 @@ export default function Sidebar({ parks, selectedParkId, onSelectPark }) {
           </div>
         </section>
       )}
+
     </aside>
   );
 }
