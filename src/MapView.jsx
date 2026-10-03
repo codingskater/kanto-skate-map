@@ -5,7 +5,6 @@ import stations from "./data/stations.json";
 import { useEffect } from "react";
 import "leaflet/dist/leaflet.css";
 import "./MapView.css";
-import * as turf from "@turf/turf";
 
 // Teal pin icon matching the Figma marker style
 const pinIcon = new L.DivIcon({
